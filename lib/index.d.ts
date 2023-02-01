@@ -1,5 +1,6 @@
+import { Isession } from "./interface/index";
 /**Class Session */
-declare class Session {
+export declare class Sessiones implements Isession {
     /**Setup
      * @class Session - Clase para manejar las sesiones
      * @method setup - Metodo para configurar las rutas de la clase
@@ -8,7 +9,3 @@ declare class Session {
      */
     setup: (app: any, server?: undefined) => void;
 }
-declare const _default: {
-    session: Session;
-};
-export default _default;

@@ -17,6 +17,38 @@ sessionOnline.setup(app);
 sessionOnline.setup(app, server);
 ```
 
+# Ejemplo solo con peticiones
+
+```js
+const express = require("express");
+const { sessionOnline } = require("yariel.dev-session-online");
+const app = express();
+
+app.get("/", function (req, res) {
+  res.send("Hello World");
+});
+
+app.listen(3000);
+
+sessionOnline.setup(app);
+```
+
+# Ejemplo con socket
+
+```js
+const express = require("express");
+const { sessionOnline } = require("yariel.dev-session-online");
+const app = express();
+
+app.get("/", function (req, res) {
+  res.send("Hello World");
+});
+
+const server = app.listen(3000);
+
+sessionOnline.setup(app, server);
+```
+
 ## Autor
 
 Yariel Baldeon

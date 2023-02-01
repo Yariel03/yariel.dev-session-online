@@ -1,15 +1,17 @@
 //cspell: disable
 import { Server } from "socket.io";
+import { Isession } from "./interface/index";
 let onlineSesion: string[] = [];
 /**Class Session */
-class Session {
+class Sessiones implements Isession {
   /**Setup
    * @class Session - Clase para manejar las sesiones
    * @method setup - Metodo para configurar las rutas de la clase
    * @param app instancia de express obligatorio
    * @param server instancia del server levantado en http (opcional) solo si desea usar socket.io
    */
-  setup = (app: any, server = undefined) => {
+
+  setup = (app: any, server = undefined): void => {
     const io = server ? new Server(server) : undefined;
 
     app
@@ -47,4 +49,4 @@ class Session {
   };
 }
 
-module.exports = { sessionOnline: new Session() };
+module.exports = { sessionOnline: new Sessiones() };
