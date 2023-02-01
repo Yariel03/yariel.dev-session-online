@@ -1,4 +1,4 @@
-# Colores en consola
+# Ver usuarios activos en nuestra app
 
 Libreria para saber cuantos usuarios estan en linea, se puede usar socket io para tiempo real o solo con peticiones
 

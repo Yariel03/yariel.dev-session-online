@@ -1,6 +1,6 @@
 {
-  "name": "yariel.dev-sessiononline",
-  "version": "1.0.0",
+  "name": "yariel.dev-session-online",
+  "version": "1.0.1",
   "description": "Libreria para saber cuantos usuarios estan en linea, se puede usar socket io para tiempo real o solo con peticiones",
   "main": "lib/index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "build:node": "tsc  --outDir dist-node",
     "start": "node dist/index.js",
     "publish:login": "npm login",
-    "publish:": "npm publish --access public",
+    "publish:public:": "npm publish --access public",
     "tsc:init": "tsc --init"
   },
   "repository": {
