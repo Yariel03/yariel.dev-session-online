@@ -47,4 +47,4 @@ class Session {
   };
 }
 
-export default { sessionOnline: new Session() };
+module.exports = { sessionOnline: new Session() };
