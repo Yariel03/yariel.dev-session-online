@@ -15,9 +15,38 @@ sessionOnline.setup(app);
 
 //or socket.io
 sessionOnline.setup(app, server);
+
+--------------------------------------------------------
+//una vez ya configurado puede usar las siguientes rutas
+GET http://localhost:3000/sessions
+//Le devuelve todos los clientes y el numero total que se han conectado
+{
+  "onlineSesion": [],
+  "count": 0
+}
+
+// Es la ruta que va sumando las sesiones
+ POST http://localhost:3000/login/session
+ devuelve el id random del usuario logueado
+{
+  "sessionId": "1675281609919"
+}
+
+//Elimina la session del cliente y actualiza el numero en linea
+ DELETE http://localhost:3000/sessions/:id
+
+ //Elimina todas las sesiones en linea
+ DELETE http://localhost:3000/sessions/
+
+ -----------------------------------------
+  Si va a usar sesiones con socket en su cliente debe uinstalar alguna libreria de socket y el evento emitido que brinda la lib es el siguiente
+                    io.emit("session-online", onlineSesion);
+  donde onlineSession es un array de todos los usuaios en linea
+
+
 ```
 
-# Ejemplo solo con peticiones
+# Ejemplo para configurar en el servidor solo con peticiones
 
 ```js
 const express = require("express");
